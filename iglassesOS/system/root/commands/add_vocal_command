@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# Create a temporary directory to store the code
+temp_dir=$(mktemp -d)
+
+# Open a text editor for the user to enter the code
+if zenity --text-info --filename="$temp_dir/code.txt" --editable --title "Function Code" --text "Enter the code for the function:"; then
+    # Prompt the user to enter the new voice command
+    voice_command=$(zenity --entry --title "New Voice Command" --text "Enter the new voice command:")
+
+    if [ -z "$voice_command" ]; then
+        zenity --error --text "The voice command cannot be empty."
+        exit 1
+    fi
+
+    # Prompt the user to enter the associated function name
+    function_name=$(zenity --entry --title "Function Name" --text "Enter the associated function name:")
+
+    if [ -z "$function_name" ]; then
+        zenity --error --text "The function name cannot be empty."
+        exit 1
+    fi
+
+    # Read the code from the temporary file
+    function_code=$(cat "$temp_dir/code.txt")
+
+    # Add the new voice command to keywords.txt
+    echo "$voice_command, $function_name" >> MAIA/audio-module/voc-sounds/keywords/keywords.txt
+
+    # Add the new function to functions.py
+    echo "" >> functions.py
+    echo "def $function_name():" >> functions.py
+    echo "$function_code" >> functions.py
+
+    zenity --info --text "New voice command and function added successfully."
+
+    # Remove the temporary directory
+    rm -r "$temp_dir"
+else
+    # The user canceled, remove the temporary directory
+    rm -r "$temp_dir"
+fi

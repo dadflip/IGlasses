@@ -1,0 +1,125 @@
+{
+    "title": ">>> Main Menu - igOS prompt <<<",
+    "options": [
+        {
+            "label": "User",
+            "submenu": {
+                "title": "User Menu",
+                "options": [
+                    {
+                        "label": "Help",
+                        "action": "show_help"
+                    },
+                    {
+                        "label": "Files",
+                        "action": "show_files"
+                    },
+                    {
+                        "label": "Sensor",
+                        "action": "usr_crack_function"
+                    },
+                    {
+                        "label": "Camera",
+                        "action": "usr_crack_function"
+                    },
+                    {
+                        "label": "Back"
+                    }
+                ]
+            }
+        },
+        {
+            "label": "Root",
+            "submenu": {
+                "title": "Root Menu",
+                "options": [
+                    {
+                        "label": "Add vocal command",
+                        "action": "add_vocal_command"
+                    },
+                    {
+                        "label": "igOS Commands",
+                        "action": "list_and_execute_commands"
+                    },
+                    {
+                        "label": "System commands",
+                        "action": "list_and_execute_commands"
+                    },
+                    {
+                        "label": "Crack",
+                        "action": "usr_crack_function"
+                    },
+                    {
+                        "label": "Show 'config.edx'",
+                        "action": "usr_crack_function"
+                    },
+                    {
+                        "label": "Show 'logs'",
+                        "action": "usr_crack_function"
+                    },
+                    {
+                        "label": "Back"
+                    }
+                ]
+            }
+        },
+        {
+            "label": "Settings",
+            "submenu": {
+                "title": "Settings Menu",
+                "options": [
+                    {
+                        "label": "Change Login",
+                        "action": "change_username"
+                    },
+                    {
+                        "label": "Change Password",
+                        "action": "change_password"
+                    },
+                    {
+                        "label": "Edit Menu Config",
+                        "action": "menu_config_edit"
+                    },
+                    {
+                        "label": "MAIA Config",
+                        "action": "maia_config"
+                    },
+                    {
+                        "label": "Back"
+                    }
+                ]
+            }
+        },
+        {
+            "label": "Setup",
+            "submenu": {
+                "title": "Setup Menu",
+                "options": [
+                    {
+                        "label": "Python Installer",
+                        "action": "show_help"
+                    },
+                    {
+                        "label": "Uninstall",
+                        "action": "show_files"
+                    },
+                    {
+                        "label": "Clear igOS files",
+                        "action": "usr_crack_function"
+                    },
+                    {
+                        "label": "Install/Reinstall",
+                        "action": "usr_crack_function"
+                    },
+                    {
+                        "label": "Back"
+                    }
+                ]
+            }
+        },
+        {
+            "label": "Quit Edx-xpl and launch MAIA",
+            "action": "exit"
+        }
+    ]
+}

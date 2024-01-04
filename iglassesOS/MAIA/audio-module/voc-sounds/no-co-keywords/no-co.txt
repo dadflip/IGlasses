@@ -1,0 +1,10 @@
+un, open_browser
+deux, close_application
+trois, get_current_time
+quatre, get_current_time
+cinq, lire_commandes_vocales
+six, stop_reading_commands
+sept, search_on_internet
+huit, get_environment_info
+neuf, get_location
+dix,get_time_of_day

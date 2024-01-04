@@ -1,0 +1,80 @@
+#!/bin/bash
+
+# Check if Python 3 is installed, and if not, install it
+if ! command -v python3 &> /dev/null; then
+    echo "Python 3 is not found. Installing Python 3..."
+    # Replace this with the appropriate command for your system
+    # For example, on a Debian-based system, you can use:
+    sudo apt update
+    sudo apt install python3
+fi
+
+# Install system packages
+sudo apt install -y zenity espeak sphinxbase-utils pocketsphinx-utils pocketsphinx
+sudo apt install python3-opencv
+
+# Ensure the system package list is up to date
+sudo apt update
+
+# List of Python packages to install (if available in the repositories)
+packages=(
+    "python-pyaudio"
+    "python-gtts"             # gtts
+    "python-playsound"        # playsound
+    "python-pyttsx3"          # pyttsx3
+    "python-speechrecognition" # speechrecognition
+    "python-webbrowser"       # webbrowser
+    "python-csv"              # csv (Not a Python package but part of Python standard library)
+    "python-geopy"            # geopy
+    "python-cython"           # cython
+    "python-imutils"          # imutils
+    "python-opencv-headless"  # opencv-python-headless
+    "python-opencv"           # opencv-python
+    "python-scipy"            # scipy
+    "python-numpy"            # numpy
+    "python-webcolors"        # webcolors
+    "python-requests"         # requests
+    "pocketsphinx"            # pocketsphinx
+)
+
+# Install each package using apt if available
+for package in "${packages[@]}"; do
+    sudo apt install -y "$package"
+done
+
+echo "All specified packages are installed."
+
+# Ensure pip is up to date
+pip install --upgrade pip
+
+# List of Python packages to install
+packages=(
+    "gtts"
+    "vosk"
+    "playsound"
+    "pyaudio"
+    "pyttsx3"
+    "SpeechRecognition"
+    "webbrowser"
+    "csv"
+    "os"
+    "geopy"
+    "cython"
+    "nms"
+    "imutils"
+    "opencv-python-headless"
+    "opencv-python"
+    "scipy"
+    "numpy"
+    "webcolors"
+    "requests"
+    "pocketsphinx"
+)
+
+# Install each package using pip
+for package in "${packages[@]}"; do
+    pip install "$package"
+done
+
+echo "All specified packages are installed."
+

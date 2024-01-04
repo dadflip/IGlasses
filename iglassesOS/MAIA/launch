@@ -1,0 +1,17 @@
+import subprocess
+import time
+import pyttsx3
+
+engine = pyttsx3.init()
+
+while True:
+    try:
+        # Exécutez votre script principal ici
+        subprocess.run(["python3", "MAIA/audio-module/start.py"])
+    except Exception as e:
+        error_message = "Une erreur s'est produite, redémarrage dans 3 secondes"
+        print("Une erreur s'est produite :", str(e))
+        engine.say(error_message)
+        engine.runAndWait()
+        time.sleep(3)  # Attendez un moment avant de redémarrer
+

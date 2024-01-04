@@ -1,0 +1,10 @@
+navigateur, open_browser
+quitter, close_application
+heure, get_current_time
+date, get_current_time
+commande, lire_commandes_vocales
+stop, stop_reading_commands
+chercher sur internet, search_on_internet
+environnement, get_environment_info
+localise-moi, get_location
+jour,get_time_of_day

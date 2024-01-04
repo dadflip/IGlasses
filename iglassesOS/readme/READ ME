@@ -1,0 +1,89 @@
+<h1 align="center">MAIA - MyApp IA</h1>
+<h4 align="center">Reconnaissance et synthèse vocale, reconnaissance d'images et d'objets</h4>
+<img align="center" src="">
+
+## Status
+![License](https://img.shields.io/badge/license-GNU-blue.svg)
+![Supported Versions](https://img.shields.io/badge/python-3.9.*-blue.svg)
+
+
+## Pour commencer
+S'assurer d'avoir les différents modules installés ainsi que leur dépendances.
+
+Fonctionne de manière optimale avec la version 3.9 de python : 
+[Vous pouvez l'installer ici](https://www.python.org/ftp/python/3.9.2/Python-3.9.2.tar.xz)
+
+
+Pour commencer, téléchargez l'archive depuis le dépôt: 
+[MAIA Download](https://github.com/dadflip/maia/releases/tag/v1.0.0)
+
+Voici le contenu de l'archive une fois décompressée:
+
+![Contenu archive](img-md/1.png)
+
+
+
+```bash
+
+tar -xf MAIA-<version>.zip #Décompressez l'archive
+cd MAIA-<version>.zip/
+chmod +x install
+./install #Lancer l'installation des modules nécessaires
+
+```
+
+Une fois l'installation terminée, vous pouvez lancer le programme avec:
+
+```python
+python3 launch
+
+```
+
+# Prérequis
+En cas d'erreur lors de l'installation consulter la liste de dépendances des modules utilisés.  
+- [PyUserInput](https://github.com/SavinaRoja/PyUserInput#dependencies)
+- [SpeechRecognition](https://github.com/Uberi/speech_recognition#requirements)
+- [pyttsx3](http://pyttsx.readthedocs.io/en/latest/install.html)
+
+## Description
+ - Le programme est concu pour fonctionner sur une architecture x86-64 et avec une connexion internet.
+ - vous pouvez ajouter de nouvelles commandes vocales en exécutant le script ./add_vocal_command.
+
+ On constate quelquefois une interprétation erronée de bruit par Wit.ai alors que Google ne comprends pas l'audio. Il peut alors être souhaitable de modifier le paramètre ```recogniz.dynamic_energy_ratio = 5``` vers une valeur plus élevée.
+
+### Fichiers
+ - ```speech.py```: Code de base à exécuter.
+ - ```messages.py```: Messages de l'application.
+ - ```utils.py```: Fonctions utiles.
+ - ```camera.py```: Intégration de la caméra.
+ - ```face_reco```: Reconnaissance faciale.
+ - ```launch.py```: Lancement du module.
+ - ```recovoc.log```: Log des actions via le module logging.
+
+### Dossiers
+ - ```Images```: Images prises par la camera, ```cap-default``` sera écrasée si ```new=False```.
+ - ```Snaps```: Images nécessaires à la création d'une vidéo, elles sont écrasées avant une nouvelle vidéo.
+ - ```Videos```: Même fonctionnement que pour le dossier ```Images```.
+
+### TODO
+- [x] Camera module tests
+- [ ] Camera module integration
+- [ ] Reconnaissance faciale.
+- [ ] speech.py tests
+
+- [ ] Sphinx Documentation
+- [-] Travis build / Makefile test
+
+## Download
+
+## Credits
+Ce programme utilise les modules Python suivants (sans mentionner leurs dépendances respectives):
+
+ - [SpeechRecognition](https://github.com/Uberi/speech_recognition)
+ - [PyUserInput](https://github.com/SavinaRoja/PyUserInput)
+ - [pytssx3](https://github.com/nateshmbhat/pyttsx3)
+ - [textblob](https://github.com/sloria/TextBlob)
+ - [pygame](https://github.com/pygame/)
+ - [face_recognition](http://face-recognition.readthedocs.io/en/latest/readme.html)
+ - [pillow](https://pillow.readthedocs.io/en/4.2.x/)
+

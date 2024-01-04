@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# List of Python packages to uninstall
+packages=(
+    "gtts"
+    "playsound"
+    "pyttsx3"
+    "speechrecognition"
+)
+
+# Loop through the packages and uninstall them using pip
+for package in "${packages[@]}"; do
+    echo "Uninstalling $package..."
+    pip uninstall -y "$package"
+done
+
+echo "All specified packages are uninstalled."
+
